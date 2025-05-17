@@ -100,3 +100,16 @@ h3{
 .correct_variant:active{
     background-color: green;
 }
+
+.container {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
