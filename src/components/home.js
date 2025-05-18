@@ -116,7 +116,7 @@ const Home = () => {
             <li><a href="#header_puzzle">{translations[language].navStartLearning}</a></li>
           </ul>
           <select className="change-lang" onChange={handleLanguageChange}>
-            <option value="ua">UA</option>
+            <option value="ua" className="ua_flag">UA</option>
             <option value="en">EN</option>
           </select>
           <img src="./images/user (2).png" onClick={openFirstModal}></img>

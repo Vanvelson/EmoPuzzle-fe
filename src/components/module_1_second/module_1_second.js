@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./module_1_second";
+import "../module_1_first/module_1_first.css";
 
 const Second_1 = () => {
 

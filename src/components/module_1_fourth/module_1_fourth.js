@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./module_1_fourth.css";
+import "../module_1_first/module_1_first.css";
 
 const Fourth_p_1 = () => {
   const navigate = useNavigate();

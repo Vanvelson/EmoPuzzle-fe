@@ -74,15 +74,15 @@ const Scene_2 = () => {
   const handleEmotionClick = (emotion) => {
     if (emotion === "Смуток") {
       setSelectedEmotion("Смуток");
-      navigate("/Login"); // Navigate to the next page when "Смуток" is clicked
+      navigate("/Login");
     } else {
       setSelectedEmotion(emotion);
-      setShowModal(true); // Show modal for other emotions
+      setShowModal(true); 
     }
   };
 
   const handleNextClick = () => {
-    navigate("/Login"); // Navigate to the next page when "Далі" is clicked
+    navigate("/Login"); 
   };
 
   return (
@@ -104,12 +104,12 @@ const Scene_2 = () => {
         <button className="back-button" onClick={() => navigate(-1)}>
           ←
         </button>
-        <h3>2/5</h3>
-        <h2>Сцена 3: Спілкування з касиром</h2>
+        <h3>3/3</h3>
+        <h2>Scene 3: Talking to the cashier</h2>
         <div className="first_story">
           <div className="text_block">
-            <p>Андрій підходить до каси, щоб розрахуватися. </p>
-            <p>Касир: "Добрий день! Вам потрібен пакет?"</p>
+            <p>Andriy approaches the cash register to pay. </p>
+            <p>Cashier: "Good afternoon! Do you need a package?"</p>
           </div>
 
           <div>
@@ -119,7 +119,7 @@ const Scene_2 = () => {
             />
           </div>
         </div>
-        <h2>Що відповісти? Мені потрібен пакет?.</h2>
+        <h2>What should I answer? I need a package?</h2>
 
         <div className="variables">
           <div className="left_variant">
@@ -129,7 +129,7 @@ const Scene_2 = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Так, будь ласка, мені потрібен пакет.
+              Yes, please, I need a package.
             </button>
             <button
               className={`btn_variant correct_variant ${
@@ -137,7 +137,7 @@ const Scene_2 = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Ні, дякую, я покладу продукти в рюкзак.
+              No, thank you, I'll put the groceries in my backpack.
             </button>
           </div>
           <div className="right_variant">
@@ -147,18 +147,10 @@ const Scene_2 = () => {
               }`}
               onClick={() => handleEmotionClick("Злість")}
             >
-              Промовчати і нічого не відповісти
+              To remain silent and not answer anything
             </button>
           </div>
-          <div className="variables_btn">
-            <button
-              type="submit"
-              className="btn btn_next btn-primary"
-              onClick={() => handleEmotionClick("Смуток")}
-            >
-              Далі
-            </button>
-          </div>
+          
 
           {showModal && (
             <div className="modal">

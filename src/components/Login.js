@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"
-import "../components/login.css"
+import { useNavigate } from "react-router-dom";
+import "../components/login.css";
 
 const Login = () => {
-
   const translations = {
     ua: {
       navHowItWorks: "Як це працює?",
@@ -64,23 +63,23 @@ const Login = () => {
         "Contact us: [email@example.com] | [Phone: +380 XXX XXX XXX XXX]",
     },
   };
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [language, setLanguage] = useState("en");
-
- 
 
   const handleLanguageChange = (e) => setLanguage(e.target.value);
 
   const goToFirstLevel = () => {
-    navigate("/firstlevel"); 
+    navigate("/firstlevel");
   };
   const goToSecondLevel = () => {
-    navigate("/camera"); 
+    navigate("/camera");
   };
   const goToThirdLevel = () => {
-    navigate("/thirdlevel"); 
+    navigate("/thirdlevel");
   };
-
+  const goToHome = () => {
+    navigate("/");
+  }
 
 
   return (
@@ -88,8 +87,8 @@ const Login = () => {
       <header></header>
 
       <main className="container">
-      <button className="back-button" onClick={() => navigate(-1)}>
-          ← 
+        <button className="back-button" onClick={goToHome}>
+          ←
         </button>
         <h2>Learning modules</h2>
         <div className="level_block">
@@ -109,7 +108,6 @@ const Login = () => {
           </div>
         </div>
       </main>
-
 
       <footer className="container footer">
         <div className="footer_text">

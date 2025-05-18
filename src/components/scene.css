@@ -16,7 +16,7 @@ h2{
 }
 h3{
     font-size: 32px;
-    text-align: end;
+    text-align: left;
     margin-top: 20px;
 }
 .first_story{
@@ -42,7 +42,7 @@ h3{
 }
 .text_block{
     width: 597px;
-    font-size: 22px;
+    font-size: 24px;
     background-color: #DCECFC;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -102,7 +102,8 @@ h3{
     position: relative;
 }
 .text_block p{
-    margin-top: 26px;
+    margin-top: 5px;
+    font-size: 20px;
 }
 .image_market{
     height: 300px;

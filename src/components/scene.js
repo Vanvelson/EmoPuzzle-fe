@@ -109,15 +109,12 @@ const Scene = () => {
         <button className="back-button" onClick={() => navigate(-1)}>
           ←
         </button>
-        <h3>1/5</h3>
-        <h2>Сцена 1: Прибуття до магазину</h2>
+        <h3>1/3</h3>
+        <h2>Scene 1: Arriving at the store</h2>
         <div className="first_story">
           <div className="text_block">
             <p>
-              The main character – a child named Andriy – comes to the store. He
-              is accompanied by his mother (or another adult) or he goes alone. 
-            </p>
-            <p>
+              The main character – a child named Andriy – comes to the store. He is accompanied by his mother (or another adult) or he goes alone. 
               Andriy (to himself): "I have a shopping list. First I'll grab a basket or a cart. What next?"
             </p>
           </div>

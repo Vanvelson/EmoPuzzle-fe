@@ -32,8 +32,7 @@ const Bella = () => {
       const options = answers.map((answer) => ({
         label: answer,
         // Нормалізуємо рядки перед порівнянням (без пробілів та регістру)
-        isCorrect:
-          answer.trim().toLowerCase() === emotion.trim().toLowerCase(),
+        isCorrect: answer.trim().toLowerCase() === emotion.trim().toLowerCase(),
       }));
 
       const shuffled = [...options].sort(() => Math.random() - 0.5);
@@ -103,12 +102,8 @@ const Bella = () => {
           <div className="text_block">
             <p>{task.text}</p>
           </div>
-          <div>
-            <img
-              src={task.image}
-              alt="Story visual"
-              className="image_fox image_fox2"
-            />
+          <div className="image_wrapper">
+            <img src={task.image} alt="Story visual" className="image_fox2" />
           </div>
         </div>
 

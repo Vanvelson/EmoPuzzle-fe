@@ -74,21 +74,26 @@ const Scene_1 = () => {
   const handleEmotionClick = (emotion) => {
     if (emotion === "Смуток") {
       setSelectedEmotion("Смуток");
-      navigate("/scene_2"); 
+      navigate("/scene_2");
     } else {
       setSelectedEmotion(emotion);
-      setShowModal(true); 
+      setShowModal(true);
     }
   };
 
   const handleNextClick = () => {
-    navigate("/scene_2"); 
+    navigate("/scene_2");
   };
 
   return (
     <div className="scene-container">
       <nav className="container">
-      <img src="./images/logo1.png" alt="" className="logo" onClick={() => navigate("/")}/>
+        <img
+          src="./images/logo1.png"
+          alt=""
+          className="logo"
+          onClick={() => navigate("/")}
+        />
         <ul>
           <li>{translations[language].navHowItWorks}</li>
           <li>{translations[language].navPhone}</li>
@@ -102,24 +107,26 @@ const Scene_1 = () => {
 
       <main className="container">
         <button className="back-button" onClick={() => navigate(-1)}>
-          ← 
+          ←
         </button>
-        <h3>2/5</h3>
-        <h2>Сцена 2: Вибір продуктів</h2>
+        <h3>2/3</h3>
+        <h2>Scene 2: Product Selection</h2>
         <div className="first_story">
           <div className="text_block">
             <p>
-            Андрій шукає продукти за списком. На полиці він бачить два види яблук: червоні та зелені. 
+              Andrew is looking for products according to the list. He sees two
+              types of apples on the shelf: red and green. 
             </p>
           </div>
 
           <div>
-            <img src="./images/market_2.png" className="image_fox image_market_2" />
+            <img
+              src="./images/market_2.png"
+              className="image_fox image_market_2"
+            />
           </div>
         </div>
-        <h2>
-        Які яблука вибрати? У моєму списку написано просто 'яблука'.
-        </h2>
+        <h2>Which apples to choose? My list simply says 'apples'.</h2>
 
         <div className="variables">
           <div className="left_variant">
@@ -129,7 +136,7 @@ const Scene_1 = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Вибрати червоні яблука.
+              Choose red apples.
             </button>
             <button
               className={`btn_variant correct_variant ${
@@ -137,7 +144,7 @@ const Scene_1 = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Вибрати зелені яблука.
+              Choose green apples.
             </button>
           </div>
           <div className="right_variant">
@@ -147,7 +154,7 @@ const Scene_1 = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Підійти до працівника магазину і запитати, які яблука краще.
+              Go up to the store employee and ask which apples are better.
             </button>
             <button
               className={`btn_variant wrong_btn ${
@@ -155,16 +162,7 @@ const Scene_1 = () => {
               }`}
               onClick={() => handleEmotionClick("Злість")}
             >
-              Взяти всі яблука, які бачить.
-            </button>
-          </div>
-          <div className="variables_btn">
-            <button
-              type="submit"
-              className="btn btn_next btn-primary"
-              onClick={() => handleEmotionClick("Смуток")}
-            >
-              Далі
+              Take all the apples you see.
             </button>
           </div>
 

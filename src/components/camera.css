@@ -43,66 +43,7 @@ h3{
     border-bottom-left-radius: 20px;
     padding: 54px 26px 54px 26px;
 }
-.variables{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 122px;
-    margin-top: 70px;
-}
-.variables_btn{
-    position: relative;
-}
-.btn_next{
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    padding: 30px 50px 30px 50px;
-    top: 120px;
-    right: 20px;
-}
-.left_variant{
-    display: flex;
-    flex-direction: column;
-    gap: 82px;
-}
-.right_variant{
-    display: flex;
-    flex-direction: column;
-    gap: 82px;
-}
-.btn_variant{
-    padding: 27px 30px 27px 27px;
-    color: 22px;
-    border-radius: 20px;
-    border: none;
-    font-size: 22px;
-}
-.btn_variant:hover{
-    background-color: #7b8085;
-    color: white;
-}
 
-
-.wrong_btn{
-    position: relative;
-}
-.image_gif{
-    position: absolute;
-    bottom: 0px;
-    height: 180px;
-    
-}
-.correct_variant{
-    position: relative;
-}
-.text_block p{
-    margin-top: 26px;
-}
-
-.btn_variant{
-    width: 500px;
-}
 .close_btn{
     padding: 10px 20px 10px 20px;
     background-color: aliceblue;
