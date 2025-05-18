@@ -74,21 +74,26 @@ const Scene = () => {
   const handleEmotionClick = (emotion) => {
     if (emotion === "Смуток") {
       setSelectedEmotion("Смуток");
-      navigate("/scene_1"); // Navigate to the next page when "Смуток" is clicked
+      navigate("/scene_1");
     } else {
       setSelectedEmotion(emotion);
-      setShowModal(true); // Show modal for other emotions
+      setShowModal(true);
     }
   };
 
   const handleNextClick = () => {
-    navigate("/scene_1"); // Navigate to the next page when "Далі" is clicked
+    navigate("/scene_1");
   };
 
   return (
     <div className="scene-container">
       <nav className="container">
-      <img src="./images/logo1.png" alt="" className="logo" onClick={() => navigate("/")}/>
+        <img
+          src="./images/logo1.png"
+          alt=""
+          className="logo"
+          onClick={() => navigate("/")}
+        />
         <ul>
           <li>{translations[language].navHowItWorks}</li>
           <li>{translations[language].navPhone}</li>
@@ -101,20 +106,19 @@ const Scene = () => {
       </nav>
 
       <main className="container">
-      <button className="back-button" onClick={() => navigate(-1)}>
-          ← 
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ←
         </button>
         <h3>1/5</h3>
         <h2>Сцена 1: Прибуття до магазину</h2>
         <div className="first_story">
           <div className="text_block">
             <p>
-              Головний герой – дитина на ім’я Андрій – приходить до магазину.
-              Його супроводжує мама (або інший дорослий) чи він іде сам. 
+              The main character – a child named Andriy – comes to the store. He
+              is accompanied by his mother (or another adult) or he goes alone. 
             </p>
             <p>
-              Андрій (до себе): "Я маю список покупок. Спочатку візьму кошик або
-              візок. Що далі?"
+              Andriy (to himself): "I have a shopping list. First I'll grab a basket or a cart. What next?"
             </p>
           </div>
 
@@ -123,7 +127,7 @@ const Scene = () => {
           </div>
         </div>
         <h2>
-          Питання: Що відчувала Белла, коли ділилася ягодами з Міло під дощем?
+          Question: How did Bella feel when she shared berries with Milo in the rain?
         </h2>
 
         <div className="variables">
@@ -134,7 +138,7 @@ const Scene = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Взяти кошик
+              Take a basket
             </button>
             <button
               className={`btn_variant correct_variant ${
@@ -142,7 +146,7 @@ const Scene = () => {
               }`}
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Взяти візок
+              Take a cart
             </button>
           </div>
           <div className="right_variant">
@@ -152,7 +156,7 @@ const Scene = () => {
               }`}
               onClick={() => handleEmotionClick("Злість")}
             >
-              Йти в магазин без кошика чи візка
+              Going to the store without a basket or trolley
             </button>
           </div>
           <div className="variables_btn">
@@ -161,7 +165,7 @@ const Scene = () => {
               className="btn btn_next btn-primary"
               onClick={() => handleEmotionClick("Смуток")}
             >
-              Далі
+              Next
             </button>
           </div>
 
@@ -172,24 +176,18 @@ const Scene = () => {
                 <div className="inmodal">
                   <div className="mb-3-3">
                     <h3 className="modal_h3">
-                      Чому має бути саме ця відповідь?
+                      Why should this be the answer?
                     </h3>
 
                     <p>
-                      Міло відчуває смуток, бо він дуже любив свою червону
-                      шапочку, а тепер не може її знайти. Він шукав її всюди –
-                      на полиці, під ліжком і навіть у скриньці з іграшками, але
-                      вона зникла. Через це він засмутився і вийшов надвір,
-                      опустивши вушка й хвостик. Коли ми втрачаємо щось важливе
-                      для нас, це може зробити нас сумними, так само, як сталося
-                      з Міло.
+                      Milo is sad because he loved his little red riding hood very much, and now he can't find it. He looked for it everywhere - on the shelf, under the bed, and even in the toy box, but it was gone. This made him sad and he went outside, his ears and tail down. When we lose something important to us, it can make us sad, just like it happened to Milo.
                     </p>
                   </div>
                   <button
                     className="close_btn"
                     onClick={() => setShowModal(false)}
                   >
-                    Закрити
+                    Close
                   </button>
                 </div>
               </div>

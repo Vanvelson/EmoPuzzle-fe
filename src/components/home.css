@@ -58,7 +58,6 @@ input{
   font-size: 24px;
   padding: 5px 20px 5px 20px;
 }
-
 .mb-3{
   text-align: left;
 }
@@ -184,6 +183,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   gap: 120px;
+  
 }
 .explore-left {
   display: flex;

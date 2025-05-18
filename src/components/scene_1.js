@@ -74,15 +74,15 @@ const Scene_1 = () => {
   const handleEmotionClick = (emotion) => {
     if (emotion === "Смуток") {
       setSelectedEmotion("Смуток");
-      navigate("/scene_2"); // Navigate to the next page when "Смуток" is clicked
+      navigate("/scene_2"); 
     } else {
       setSelectedEmotion(emotion);
-      setShowModal(true); // Show modal for other emotions
+      setShowModal(true); 
     }
   };
 
   const handleNextClick = () => {
-    navigate("/scene_2"); // Navigate to the next page when "Далі" is clicked
+    navigate("/scene_2"); 
   };
 
   return (

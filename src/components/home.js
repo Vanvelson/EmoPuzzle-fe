@@ -145,12 +145,12 @@ const Home = () => {
               <div className="bg"></div>
               <div className="inmodal">
                 <img src="./images/logo1.png" alt="Logo" />
-                <h2>Ласкаво просимо до EmoPuzzle</h2>
+                <h2>Welcome to EmoPuzzle</h2>
                 <button className="modal_btn_1" onClick={handleRegisterClick}>
-                  Зареєструватись
+                  Register
                 </button>
                 <button className="modal_btn_2" onClick={handleLoginClickPage}>
-                  Увійти
+                  Log in
                 </button>
                 <button onClick={closeFirstModal} className="closeModal">
                   Close
@@ -166,13 +166,13 @@ const Home = () => {
             <div className="modal-content">
               <div className="bg"></div>
               <div className="inmodal">
-                <h2>Вхід</h2>
+                <h2>Login</h2>
                 <div className="mb-3">
-                  <h3>Електронна пошта</h3>
+                  <h3>E-mail</h3>
                   <input type="email" className="form-control" />
                 </div>
                 <div className="mb-3">
-                  <h3>Пароль</h3>
+                  <h3>Password</h3>
                   <input type="password" className="form-control" />
                 </div>
                 <div className="checkbox_block">
@@ -180,7 +180,7 @@ const Home = () => {
                   <p>Privacy Policy</p>
                 </div>
                 <button className="btn btn-primary" onClick={handleLoginClick}>
-                  Увійти
+                  Sign in
                 </button>
                 <button onClick={closeLoginModal} className="closeModal">
                   Close
@@ -199,8 +199,8 @@ const Home = () => {
                 <form id="registerForm">
                   <div class="modal-body">
                     <div class="mb-3">
-                      <h3>Введіть робочу адресу електроної пошти</h3>
-                      <p className="paragraph_modal">Потрібно підтвердити цю пошту пізніше</p>
+                      <h3>Enter your work email address</h3>
+                      <p className="paragraph_modal">You will need to confirm this email later</p>
                       <input
                         type="email"
                         class="form-control"
@@ -209,8 +209,8 @@ const Home = () => {
                       />
                     </div>
                     <div class="mb-3">
-                      <h3>Створіть пароль</h3>
-                      <p>Принаймні 8 символів</p>
+                      <h3>Create a password</h3>
+                      <p>At least 8 characters</p>
                       <input
                         type="password"
                         class="form-control"
@@ -218,7 +218,7 @@ const Home = () => {
                       />
                     </div>
                     <div className="mb-3">
-                      <h3>Повторіть пароль</h3>
+                      <h3>Repeat the password</h3>
                       <input
                         type="password"
                         className="form-control"
@@ -256,20 +256,20 @@ const Home = () => {
               <div className="inmodal">
                 <img src="./images/user_reg.png" />
                 <div className="mb-3-3">
-                  <h3>Створіть пароль</h3>
+                  <h3>Create a password</h3>
                   <input
                     type="password"
                     className="form-control"
                     id="InputPassword1"
                   />
-                  <p>Це буде відображатися у Вашому профілі </p>
+                  <p>This will be displayed on your profile</p>
                 </div>
                 <button
                   type="submit"
                   className="btn btn-primary" onClick={handleLoginClick}
 
                 >
-                  Далі
+                  Next
                 </button>
                 <button onClick={closeThirdModal} className="closeModal">
                   Close

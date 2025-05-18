@@ -18,14 +18,22 @@ const Bella = () => {
   const fetchNewTask = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://back-end-hazel-six.vercel.app/novel/create_novel?lang=Eng");
+      const res = await fetch(
+        "https://back-end-hazel-six.vercel.app/novel/create_novel?lang=Eng"
+      );
       const data = await res.json();
 
       const { text, image, question, answers, explanation, emotion } = data;
 
+      // Для дебагу виводимо у консоль відповіді та емоцію
+      console.log("Answers from backend:", answers);
+      console.log("Correct emotion from backend:", emotion);
+
       const options = answers.map((answer) => ({
         label: answer,
-        isCorrect: answer === emotion
+        // Нормалізуємо рядки перед порівнянням (без пробілів та регістру)
+        isCorrect:
+          answer.trim().toLowerCase() === emotion.trim().toLowerCase(),
       }));
 
       const shuffled = [...options].sort(() => Math.random() - 0.5);
@@ -86,7 +94,9 @@ const Bella = () => {
       </nav>
 
       <main className="container">
-        <button className="back-button" onClick={() => navigate(-1)}>←</button>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ←
+        </button>
         <h3>{`${questionCount + 1} / ${TOTAL_QUESTIONS}`}</h3>
 
         <div className="first_story">

@@ -91,20 +91,20 @@ const Login = () => {
       <button className="back-button" onClick={() => navigate(-1)}>
           ← 
         </button>
-        <h2>Модулі навчання</h2>
+        <h2>Learning modules</h2>
         <div className="level_block">
           <div className="item_block lvl_block1" onClick={goToFirstLevel}>
-            <h3>Читання з візуалізацією</h3>
+            <h3>Reading with visualization</h3>
             <img src="./images/level1_block.png"></img>
           </div>
 
           <div className="item_block lvl_block2" onClick={goToSecondLevel}>
-            <h3>Вираження емоцій</h3>
+            <h3>Expression of emotions</h3>
             <img src="./images/level2_block.png"></img>
           </div>
 
           <div className="item_block lvl_block3" onClick={goToThirdLevel}>
-            <h3>Прийняття рішень</h3>
+            <h3>Making decisions</h3>
             <img src="./images/level3_block.png"></img>
           </div>
         </div>

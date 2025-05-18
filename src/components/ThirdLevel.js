@@ -98,14 +98,14 @@ const Second_3 = () => {
             <button className="back-button" onClick={() => navigate(-1)}>
           ← 
         </button>
-                <h2>Модуль 3</h2>
-                <p className="paragraph_module1">Прочитай ситуацію та вибери як би ти вчинив далі</p>
+                <h2>Module 3</h2>
+                <p className="paragraph_module1">Read the situation and choose how you would act next</p>
                 <div className="all_block">
                     <div className="left-side_block">
                         <div className="module_block">
                             <div className="first_block" onClick={goToScene}>
                                 <div className="block_number">1</div>
-                                <p>Солодкий сюрприз</p>
+                                <p>A sweet surprise</p>
                             </div>
                         </div>
                     </div>

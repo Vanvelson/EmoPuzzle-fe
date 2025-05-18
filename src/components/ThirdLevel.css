@@ -130,3 +130,7 @@ h3{
 .correct_variant:active{
     background-color: green;
 }
+.footer{
+
+    margin-top: 20px;
+}

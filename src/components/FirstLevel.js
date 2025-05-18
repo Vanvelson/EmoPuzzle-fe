@@ -104,44 +104,44 @@ const FirstLevel = () => {
         <button className="back-button" onClick={() => navigate(-1)}>
           ←
         </button>
-        <h2>Модуль 1</h2>
+        <h2>Module 1</h2>
         <p className="paragraph_module1">
-          Прочитай текст та дай відповідь на запитання
+          Read the text and answer the questions.
         </p>
         <div className="all_block">
           <div className="left-side_block">
             <div className="module_block">
               <div className="first_block">
                 <div className="block_number">1</div>
-                <p onClick={goToModule_1_first}>Загублена шапочка</p>
+                <p onClick={goToModule_1_first}>Lost hat</p>
               </div>
             </div>
             <div className="module_block">
               <div className="first_block">
                 <div className="block_number">2</div>
-                <p onClick={goToModule_1_second}>Белла приходить на допомогу</p>
+                <p onClick={goToModule_1_second}>Bella comes to the rescue</p>
               </div>
             </div>
             <div className="module_block">
               <div className="first_block">
                 <div className="block_number">3</div>
-                <p onClick={goToModule_1_third}>Зіпсований пікнік</p>
+                <p onClick={goToModule_1_third}>Spoiled picnic</p>
               </div>
             </div>
             <div className="module_block">
               <div className="first_block">
                 <div className="block_number">4</div>
-                <p onClick={goToModule_1_fourth}>Радість під дощем</p>
+                <p onClick={goToModule_1_fourth}>Joy in the rain</p>
               </div>
             </div>
-            <div className="module_block">
+            <div className="module_block module_block_last">
               <div className="first_block">
                 <div className="block_number">5</div>
-                <p>Добре слово для Белли</p>
+                <p>A good word for Bella</p>
               </div>
             </div>
           </div>
-          <img src="./images/total_points.png" />
+          <img src="./images/total_points.png" className="points"/>
         </div>
       </main>
 

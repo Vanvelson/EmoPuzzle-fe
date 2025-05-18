@@ -50,3 +50,12 @@ h2{
     text-align: center;
     margin-top: 15px;
 }
+
+.module_block_last{
+    margin-bottom: 20px;
+}
+.points{
+    width: 700px;
+    height: 300px;
+    margin-top: 150px;
+}
