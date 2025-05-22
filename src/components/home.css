@@ -11,11 +11,11 @@ body{
 }
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Тінь для фонового затемнення */
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body{
 .modal-content {
   padding: 20px;
   border-radius: 8px;
-  width: 1000px;
+  width: 1512px;
   text-align: center;
 }
 .paragraph_modal{
