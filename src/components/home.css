@@ -13,8 +13,8 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Тінь для фонового затемнення */
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ body{
 .modal-content {
   padding: 20px;
   border-radius: 8px;
-  width: 1512px;
+  width: 1000px;
   text-align: center;
 }
 .paragraph_modal{
