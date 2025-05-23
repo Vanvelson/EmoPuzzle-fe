@@ -6,9 +6,9 @@ const TOTAL_QUESTIONS = 5;
 
 
 const emotionGifs = {
-  sadness: "../public/images/gif/module_1/Sadness.gif",
+  sadness: "../public/images/fox_3.png",
   surprise: "../public/images/gif/first_level/Surprise.gif",
-  joy: "../public/images/gif/first_level/Joy.gif",
+  joy: "../public/images/fox_3.png",
   anger: "../public/images/gif/first_level/Anger.gif",
   shame: "../public/images/gif/first_level/Shame.gif",
 };
