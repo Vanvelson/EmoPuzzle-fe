@@ -98,7 +98,6 @@ const Login = () => {
             <h3>Expression of emotions</h3>
             <img src="./images/level2_block.png"></img>
           </div>
-
         </div>
       </main>
 
