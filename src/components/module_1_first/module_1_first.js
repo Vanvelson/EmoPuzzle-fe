@@ -15,16 +15,7 @@ const Bella = () => {
   const [transition, setTransition] = useState(false);
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
-const emotionGifs = {
-  anger: "/images/gif/first_level/Anger1-unscreen.gif",
-  anxiety: "/images/gif/first_level/Anxiety1-unscreen.gif",
-  confusion: "/images/gif/first_level/Confusion1-unscreen.gif",
-  sadness: "/images/gif/first_level/Sadness1-unscreen.gif",
-};
-const getGifForEmotion = (label) => {
-  const key = label.trim().toLowerCase();
-  return emotionGifs[key] || null;
-};
+
 
   const fetchNewTask = async () => {
     setLoading(true);
@@ -120,37 +111,22 @@ const getGifForEmotion = (label) => {
         <h2>{task.question}</h2>
 
         <div className="variables">
-  {shuffledAnswers.map((option, idx) => {
-    const gifSrc = getGifForEmotion(option.label);
-    return (
-      <button
-        key={idx}
-        className={`btn_variant ${
-          selectedEmotion?.label === option.label
-            ? option.isCorrect
-              ? "green"
-              : "wrong_btn"
-            : ""
-        }`}
-        onClick={() => handleEmotionClick(option)}
-      >
-        {gifSrc && (
-          <img
-            src={gifSrc}
-            alt={option.label}
-            style={{
-              width: "24px",
-              height: "24px",
-              marginRight: "8px",
-              verticalAlign: "middle",
-            }}
-          />
-        )}
-        {option.label}
-      </button>
-    );
-  })}
-</div>
+          {shuffledAnswers.map((option, idx) => (
+            <button
+              key={idx}
+              className={`btn_variant ${
+                selectedEmotion?.label === option.label
+                  ? option.isCorrect
+                    ? "green"
+                    : "wrong_btn"
+                  : ""
+              }`}
+              onClick={() => handleEmotionClick(option)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
 
         {showModal && (
           <div className="modal">
