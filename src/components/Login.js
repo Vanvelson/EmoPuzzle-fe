@@ -69,13 +69,10 @@ const Login = () => {
   const handleLanguageChange = (e) => setLanguage(e.target.value);
 
   const goToFirstLevel = () => {
-    navigate("/firstlevel");
+    navigate("/module_1_first");
   };
   const goToSecondLevel = () => {
     navigate("/camera");
-  };
-  const goToThirdLevel = () => {
-    navigate("/thirdlevel");
   };
   const goToHome = () => {
     navigate("/");
@@ -102,10 +99,6 @@ const Login = () => {
             <img src="./images/level2_block.png"></img>
           </div>
 
-          <div className="item_block lvl_block3" onClick={goToThirdLevel}>
-            <h3>Making decisions</h3>
-            <img src="./images/level3_block.png"></img>
-          </div>
         </div>
       </main>
 
