@@ -4,6 +4,20 @@ import "./module_1_first.css";
 
 const TOTAL_QUESTIONS = 5;
 
+// Map emotion names to GIF paths
+const emotionGifs = {
+  sadness: "/images/gif/module_1/Sadness.gif",
+  surprise: "/images/gif/first_level/Surprise.gif",
+  joy: "/images/gif/first_level/Joy.gif",
+  anger: "/images/gif/first_level/Anger.gif",
+  shame: "/images/gif/first_level/Shame.gif",
+};
+
+const getGifForEmotion = (label) => {
+  const key = label.trim().toLowerCase();
+  return emotionGifs[key] || null;
+};
+
 const Bella = () => {
   const navigate = useNavigate();
   const [task, setTask] = useState(null);
@@ -15,8 +29,6 @@ const Bella = () => {
   const [transition, setTransition] = useState(false);
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
-
-
   const fetchNewTask = async () => {
     setLoading(true);
     try {
@@ -27,12 +39,8 @@ const Bella = () => {
 
       const { text, image, question, answers, explanation, emotion } = data;
 
-      console.log("Answers from backend:", answers);
-      console.log("Correct emotion from backend:", emotion);
-
       const options = answers.map((answer) => ({
         label: answer,
-       
         isCorrect: answer.trim().toLowerCase() === emotion.trim().toLowerCase(),
       }));
 
@@ -111,21 +119,36 @@ const Bella = () => {
         <h2>{task.question}</h2>
 
         <div className="variables">
-          {shuffledAnswers.map((option, idx) => (
-            <button
-              key={idx}
-              className={`btn_variant ${
-                selectedEmotion?.label === option.label
-                  ? option.isCorrect
-                    ? "green"
-                    : "wrong_btn"
-                  : ""
-              }`}
-              onClick={() => handleEmotionClick(option)}
-            >
-              {option.label}
-            </button>
-          ))}
+          {shuffledAnswers.map((option, idx) => {
+            const gifSrc = getGifForEmotion(option.label);
+            return (
+              <button
+                key={idx}
+                className={`btn_variant ${
+                  selectedEmotion?.label === option.label
+                    ? option.isCorrect
+                      ? "green"
+                      : "wrong_btn"
+                    : ""
+                }`}
+                onClick={() => handleEmotionClick(option)}
+              >
+                {gifSrc && (
+                  <img
+                    src={gifSrc}
+                    alt={option.label}
+                    style={{
+                      width: "24px",
+                      height: "24px",
+                      marginRight: "8px",
+                      verticalAlign: "middle",
+                    }}
+                  />
+                )}
+                {option.label}
+              </button>
+            );
+          })}
         </div>
 
         {showModal && (
