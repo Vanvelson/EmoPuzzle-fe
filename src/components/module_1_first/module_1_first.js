@@ -6,11 +6,11 @@ const TOTAL_QUESTIONS = 5;
 
 
 const emotionGifs = {
-  sadness: "./public/images/gif/module_1/Sadness.gif",
-  surprise: "./public/images/gif/first_level/Surprise.gif",
-  joy: "./public/images/gif/first_level/Joy.gif",
-  anger: "./public/images/gif/first_level/Anger.gif",
-  shame: "./public/images/gif/first_level/Shame.gif",
+  sadness: "../public/images/gif/module_1/Sadness.gif",
+  surprise: "../public/images/gif/first_level/Surprise.gif",
+  joy: "../public/images/gif/first_level/Joy.gif",
+  anger: "../public/images/gif/first_level/Anger.gif",
+  shame: "../public/images/gif/first_level/Shame.gif",
 };
 
 const getGifForEmotion = (label) => {
@@ -136,7 +136,6 @@ const Bella = () => {
                 {gifSrc && (
                   <img
                     src={gifSrc}
-                    
                     style={{
                       width: "24px",
                       height: "24px",
